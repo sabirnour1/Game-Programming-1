@@ -378,5 +378,44 @@ public class Floor4 extends World
         Drone drone6 = new Drone(2);
         addObject(drone6,280,316);
         removeObject(drone3);
+        Drone drone7 = new Drone(5);
+        addObject(drone7,465,316);
+        removeObject(drone4);
+        Drone drone16 = new Drone(5);
+        addObject(drone4,164,314);
+        removeObject(drone2);
+
+        addObject(drone2,849,82);
+        removeObject(drone);
+
+        addObject(drone,845,427);
+        guard5.setLocation(738,520);
+        guard5.setLocation(735,523);
+        guard5.setLocation(734,528);
+        removeObject(drone4);
+        removeObject(drone6);
+        removeObject(drone);
+        Drone drone15 = new Drone(8);
+        addObject(drone,850,437);
+        Drone drone8 = new Drone(5);
+        addObject(drone4,172,308);
+        Drone drone18 = new Drone(6);
+        addObject(drone18,172,434);
+        removeObject(drone);
+        removeObject(guard6);
+        guard5.setLocation(763,521);
+        guard5.setLocation(760,526);
+        guard5.setLocation(761,515);
+        guard5.setLocation(760,517);
+        guard5.setLocation(760,523);
+        Drone drone9 = new Drone(5);
+        addObject(drone9,55,310);
+        Drone drone10 = new Drone(4);
+        addObject(drone10,497,73);
+        removeObject(drone4);
+        removeObject(drone2);
+        Drone drone11 = new Drone(3);
+        addObject(drone11,840,312);
+        removeObject(drone5);
     }
 }
