@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class WinWorld extends World
 {
 
+    private GreenfootSound music = new GreenfootSound("WinningMusic.mp3");
     /**
      * Constructor for objects of class WinWorld.
      * 
@@ -17,6 +18,8 @@ public class WinWorld extends World
     {    
         super(970, 625, 1); 
         prepare();
+        Floor2.music.stop();
+        music.playLoop();
     }
     
     /**

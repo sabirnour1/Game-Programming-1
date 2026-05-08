@@ -8,10 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Floor2 extends World
 {
+    static GreenfootSound music = new GreenfootSound("gameMusic.mp3");
     public Floor2()
     {    
         super(900, 600, 1); 
         prepare();
+        music.playLoop();
     }
     
     /**
@@ -145,7 +147,6 @@ public class Floor2 extends World
         wall211.setLocation(284,464);
         wall114.setLocation(158,511);
         wall114.setLocation(160,534);
-        mainActor.setLocation(172,401);
         wall211.setLocation(292,449);
         wall211.setLocation(284,445);
         wall29.setLocation(808,509);
@@ -155,9 +156,7 @@ public class Floor2 extends World
         addObject(wall212,841,502);
         wall212.setLocation(855,512);
         wall212.setLocation(847,503);
-        mainActor.setLocation(691,365);
-        mainActor.setLocation(409,414);
-        Safe safe = new Safe();
+        Safe1 safe = new Safe1();
         addObject(safe,838,547);
         wall27.setLocation(570,342);
         wall27.setLocation(573,343);
@@ -190,7 +189,6 @@ public class Floor2 extends World
         wall17.setLocation(591,520);
         wall211.setLocation(278,470);
         wall211.setLocation(300,466);
-        mainActor.setLocation(57,68);
         wall114.setLocation(179,527);
         wall114.setLocation(179,527);
         wall29.setLocation(754,504);
@@ -235,5 +233,8 @@ public class Floor2 extends World
         guard.setLocation(212,182);
         guard.setLocation(218,185);
         guard2.setLocation(338,184);
+        key.setLocation(816,451);
+        KeySpawn keySpawn = new KeySpawn();
+        addObject(keySpawn,816,451);
     }
 }

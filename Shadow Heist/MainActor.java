@@ -5,7 +5,6 @@ import greenfoot.*;
 public class MainActor extends Actor
 {
     GreenfootImage[] run = new GreenfootImage[4];
-    private GreenfootSound music = new GreenfootSound("gameMusic.mp3");
     int frame = 0;
     int runSpeed = 2;
     int animationDelay = 9;
@@ -16,6 +15,8 @@ public class MainActor extends Actor
     int blockY;
     long startTime = 0;
     boolean canDie = true;
+    int startDelay = 0;
+    int moveDelay;
     public MainActor()
     {
         blockX = 500;
@@ -23,18 +24,23 @@ public class MainActor extends Actor
         canDie = true;
         keyCollected = false;
         safeCollected = false;
-        music.playLoop();
     }
 
-    public void act()
-    {   
-        move();
-        die();
-        collectKey();
-        collectSafe();
+    public void act(){
+        try {
+            if (getWorld() == null) return;
+            moveDelay++;
+            if (moveDelay > 100)
+                move();
+            die();
+            collectKey();
+            collectSafe();
+        } catch (NullPointerException e) {
+        }
     }
 
     public void move(){
+        if (getWorld() == null) return;
         if (!isTouching(Wall1.class)){
             blockX = getX();
             blockY = getY();
@@ -87,7 +93,6 @@ public class MainActor extends Actor
 
     public void animateRun(){
         delayCounter++;
-
         if(delayCounter >= animationDelay) {
             setImage(run[frame]);
             frame++;
@@ -96,19 +101,18 @@ public class MainActor extends Actor
             }
             delayCounter = 0;
         }
-
     }
 
     public void die(){
-        if (canDie){
-            if (isTouching(Guard.class)){
-                setLocation(500, 200);
-                Greenfoot.playSound("death.wav");
-                music.stop();
-                keyCollected = false;
-                safeCollected = false;
-                Greenfoot.setWorld(new Floor1());
+        if (isTouching(Guard.class) || isTouching(Drone.class)){
+            setLocation(73, 73);
+            Greenfoot.playSound("death.wav");
+            if (keyCollected){
+                Actor spawn = getWorld().getObjects(KeySpawn.class).get(0);
+                getWorld().addObject(new Key(), spawn.getX(), spawn.getY());
             }
+            keyCollected = false;
+            safeCollected = false;
         }
     }
 
@@ -126,19 +130,27 @@ public class MainActor extends Actor
             Actor safe = getOneIntersectingObject(Safe.class);
             getWorld().removeObject(safe);
             Greenfoot.playSound("collectSafe.mp3");
-            music.stop();
             canDie = false;
             Greenfoot.setWorld(new TutorialEnd());
         }
         if (keyCollected && isTouching(Safe1.class)){
             Actor safe1 = getOneIntersectingObject(Safe1.class);
             getWorld().removeObject(safe1);
+            Greenfoot.playSound("collectSafe.mp3");
             Greenfoot.setWorld(new Floor3());
         }
         if (keyCollected && isTouching(Safe2.class)){
             Actor safe2 = getOneIntersectingObject(Safe2.class);
             getWorld().removeObject(safe2);
+            Greenfoot.playSound("collectSafe.mp3");
             Greenfoot.setWorld(new Floor4());
+        }
+        if (keyCollected && isTouching(Safe3.class)){
+            Actor safe3 = getOneIntersectingObject(Safe3.class);
+            getWorld().removeObject(safe3);
+            Greenfoot.playSound("collectSafe.mp3");
+            Greenfoot.playSound("winSound.mp3");
+            Greenfoot.setWorld(new WinWorld());
         }
     }
 }

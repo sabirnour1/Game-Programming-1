@@ -22,12 +22,19 @@ public class Floor1 extends World
     private void prepare()
     {
         MainActor mainActor = new MainActor();
-        addObject(mainActor,800,300);
+        addObject(mainActor,73,73);
+        TopWall topWall = new TopWall();
+        addObject(topWall,450,10);
+        TopWall topWall1 = new TopWall();
+        addObject(topWall1,450,590);
         Key key = new Key();
         addObject(key,124,300);
         Safe safe = new Safe();
         addObject(safe,550,500);
         Guard guard = new Guard(1);
         addObject(guard,450,300);
+        key.setLocation(125,300);
+        KeySpawn keySpawn = new KeySpawn();
+        addObject(keySpawn,125,300);
     }
 }

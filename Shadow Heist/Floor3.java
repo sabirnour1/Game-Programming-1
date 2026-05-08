@@ -145,7 +145,7 @@ public class Floor3 extends World
         addObject(guard9,682,51);
         Guard guard10 = new Guard(1);
         addObject(guard10,679,541);
-        Safe safe = new Safe();
+        Safe2 safe = new Safe2();
         addObject(safe,72,191);
         Key key = new Key();
         addObject(key,827,72);
@@ -269,5 +269,8 @@ public class Floor3 extends World
         addObject(guard13,730,50);
         Guard guard14 = new Guard(1);
         addObject(guard14,731,550);
+        key.setLocation(829,76);
+        KeySpawn keySpawn = new KeySpawn();
+        addObject(keySpawn,829,76);
     }
 }

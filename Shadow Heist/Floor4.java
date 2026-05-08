@@ -29,7 +29,7 @@ public class Floor4 extends World
         TopWall topWall1 = new TopWall();
         addObject(topWall1,450,590);
         MainActor mainActor = new MainActor();
-        addObject(mainActor,451,296);
+        addObject(mainActor,73,73);
         Wall1 wall1 = new Wall1();
         addObject(wall1,151,84);
         Wall2 wall2 = new Wall2();
@@ -141,8 +141,6 @@ public class Floor4 extends World
         addObject(wall216,734,373);
         Wall1 wall117 = new Wall1();
         addObject(wall117,807,323);
-        mainActor.setLocation(445,304);
-        mainActor.setLocation(447,315);
         Wall1 wall118 = new Wall1();
         addObject(wall118,99,444);
         Wall2 wall217 = new Wall2();
@@ -245,25 +243,25 @@ public class Floor4 extends World
         Wall1 wall130 = new Wall1();
         addObject(wall130,425,196);
         Guard guard = new Guard(1);
-        addObject(guard,841,66);
+        addObject(guard,840,65);
         wall25.setLocation(544,156);
         wall25.setLocation(584,154);
         wall25.setLocation(584,153);
         wall25.setLocation(585,152);
         Guard guard2 = new Guard(1);
-        addObject(guard2,705,195);
+        addObject(guard2,700,200);
         wall25.setLocation(541,148);
         Wall1 wall131 = new Wall1();
         addObject(wall131,541,148);
         wall131.setLocation(539,174);
         wall131.setLocation(540,145);
         Guard guard3 = new Guard(1);
-        addObject(guard3,701,308);
+        addObject(guard3,700,310);
         guard3.setLocation(703,297);
         guard3.setLocation(704,308);
         Guard guard4 = new Guard(1);
-        addObject(guard4,730,534);
-        guard4.setLocation(704,527);
+        addObject(guard4,730,535);
+        guard4.setLocation(705,530);
         Guard guard5 = new Guard(1);
         addObject(guard5,756,526);
         Guard guard6 = new Guard(1);
@@ -290,7 +288,7 @@ public class Floor4 extends World
         addObject(guard13,176,312);
         Key key = new Key();
         addObject(key,586,317);
-        Safe safe = new Safe();
+        Safe3 safe = new Safe3();
         addObject(safe,156,541);
         wall18.setLocation(326,173);
         wall18.setLocation(327,137);
@@ -302,8 +300,8 @@ public class Floor4 extends World
         guard14.setLocation(408,68);
         wall211.setLocation(179,248);
         wall110.setLocation(147,252);
-        guard11.setLocation(49,539);
-        guard11.setLocation(49,541);
+        guard11.setLocation(49,540);
+        guard11.setLocation(49,540);
         wall25.setLocation(367,134);
         wall23.setLocation(583,153);
         wall23.setLocation(403,124);
@@ -340,5 +338,45 @@ public class Floor4 extends World
         wall131.setLocation(528,92);
         wall131.setLocation(544,106);
         removeObject(wall131);
+        key.setLocation(587,317);
+        KeySpawn keySpawn = new KeySpawn();
+        addObject(keySpawn,587,317);
+        removeObject(guard11);
+        removeObject(guard8);
+        Drone drone = new Drone(1);
+        addObject(drone,819,428);
+        removeObject(guard);
+        Drone drone2 = new Drone(1);
+        addObject(drone2,827,78);
+        removeObject(guard14);
+        Drone drone3 = new Drone(1);
+        addObject(drone3,372,64);
+        removeObject(guard12);
+
+        removeObject(guard13);
+        Drone drone4 = new Drone(1);
+        addObject(drone4,160,316);
+        removeObject(guard9);
+
+        removeObject(guard6);
+
+        addObject(guard6,557,524);
+        removeObject(guard4);
+
+        Guard guard15 = new Guard(1);
+        addObject(guard15,324,429);
+        Drone drone5 = new Drone(1);
+        addObject(drone5,329,189);
+        removeObject(drone5);
+        Guard guard16 = new Guard(1);
+        addObject(guard16,279,190);
+        removeObject(guard3);
+        Drone drone51 = new Drone(2);
+        addObject(drone5,723,314);
+        Guard guard32 = new Guard(1);
+        addObject(guard3,491,143);
+        Drone drone6 = new Drone(2);
+        addObject(drone6,280,316);
+        removeObject(drone3);
     }
 }
