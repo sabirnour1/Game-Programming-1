@@ -19,8 +19,8 @@ public class MainActor extends Actor
     int moveDelay;
     public MainActor()
     {
-        blockX = 500;
-        blockY = 200;
+        blockX = 73;
+        blockY = 73;
         canDie = true;
         keyCollected = false;
         safeCollected = false;
