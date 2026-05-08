@@ -236,5 +236,8 @@ public class Floor2 extends World
         key.setLocation(816,451);
         KeySpawn keySpawn = new KeySpawn();
         addObject(keySpawn,816,451);
+        Drone drone = new Drone(1);
+        addObject(drone,310,408);
+        drone.setLocation(313,402);
     }
 }

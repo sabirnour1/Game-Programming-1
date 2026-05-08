@@ -50,7 +50,6 @@ public class MainActor extends Actor
             setLocation(getX(), getY() - runSpeed);
         }
         if(Greenfoot.isKeyDown("s") || Greenfoot.isKeyDown("down")){
-            animateRun();
             setLocation(getX(), getY() + runSpeed);
         }
         if(Greenfoot.isKeyDown("d") || Greenfoot.isKeyDown("right")){
