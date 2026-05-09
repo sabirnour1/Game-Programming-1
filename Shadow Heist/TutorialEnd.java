@@ -18,7 +18,7 @@ public class TutorialEnd extends World
 
     public void act(){
         long elapsed = System.currentTimeMillis() - startTime;
-        if (elapsed >= 3000) {
+        if (elapsed >= 5000) {
             Greenfoot.setWorld(new Floor2());
         }
     }

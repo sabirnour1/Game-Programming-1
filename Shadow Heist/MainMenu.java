@@ -11,7 +11,7 @@ public class MainMenu extends World
     public MainMenu()
     {    
         super(1198, 686, 1); 
-        GreenfootImage menu = new GreenfootImage("MainMenu.png");
+        GreenfootImage menu = new GreenfootImage("Back Grond.png");
         menu.scale(1198, 686);
         setBackground(menu);
         prepare();
@@ -25,5 +25,12 @@ public class MainMenu extends World
     {
         PlayButton playButton = new PlayButton();
         addObject(playButton,609,287);
+        playButton.setLocation(325,552);
+        Char char_ = new Char();
+        addObject(char_, 733, 386);
+
+        playButton.setLocation(268,586);
+        playButton.setLocation(280,603);
+        playButton.setLocation(245,600);
     }
 }

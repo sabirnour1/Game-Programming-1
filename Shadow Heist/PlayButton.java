@@ -14,20 +14,23 @@ public class PlayButton extends Actor
     private GreenfootSound music = new GreenfootSound("menuMusic.mp3");
     public PlayButton(){
         music.playLoop();
-    }
+        
+        }
     public void act()
     {
         buttonFunctions();
     }
-
+    public boolean getHoverStatus() {
+         return isHovered;
+     }
     public void buttonFunctions(){
         if (Greenfoot.mouseMoved(null) && !Greenfoot.mouseMoved(this)){
-            normal = new GreenfootImage("PlayButton.png");
+            normal = new GreenfootImage("Play.png");
             setImage(normal);
             isHovered = false;
         }
         if (Greenfoot.mouseMoved(this)){
-            hovered = new GreenfootImage("PlayButtonHov.png");
+            hovered = new GreenfootImage("Playred.png");
             setImage(hovered);
             if (!isHovered){
                 Greenfoot.playSound("button1.mp3");

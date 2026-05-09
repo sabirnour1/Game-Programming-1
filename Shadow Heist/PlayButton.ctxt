@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=PlayButton
-comment0.text=\n\ Write\ a\ description\ of\ class\ PlayButton\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ PlayButton\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=PlayButton()
 comment2.params=
 comment2.target=void\ act()
 comment3.params=
-comment3.target=void\ buttonFunctions()
-numComments=4
+comment3.target=boolean\ getHoverStatus()
+comment4.params=
+comment4.target=void\ buttonFunctions()
+numComments=5
